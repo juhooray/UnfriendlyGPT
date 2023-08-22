@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6341e1f38c.js" crossorigin="anonymous"></script>
+    <title>ChatGPT Integration</title>
+  </head>
+  <body>
+    <div id="chat-container">
+      <div id="chat-display">
+      </div>
+      <div class="chat-box">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button class="send-button" onclick="sendMessage()" id="send-btn">
+          send
+        </button>
+      </div>
+    </div>
+
+    <script>
+      var input = document.getElementById("user-input");
+
+      input.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          document.getElementById("send-btn").click();
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>
